@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="CMSystem">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/CMS System/out/artifacts/CMSystem_jar/CMSystem.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

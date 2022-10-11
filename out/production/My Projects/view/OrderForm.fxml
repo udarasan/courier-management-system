@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="640.0" prefWidth="1241.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderFormController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="OrderForm">
+         <font>
+            <Font name="SansSerif Bold" size="18.0" />
+         </font></Label>
+      <Pane layoutX="33.0" layoutY="66.0" prefHeight="474.0" prefWidth="559.0" style="-fx-border-color: #0088ff; -fx-border-radius: 15px;">
+         <children>
+            <JFXComboBox fx:id="cmbCID" editable="true" layoutX="18.0" layoutY="68.0" onAction="#selectCIDOnAction" prefHeight="32.0" prefWidth="143.0" promptText="Customer ID" />
+            <Label layoutX="15.0" layoutY="35.0" text="Customer Infomation &gt;">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="127.0" text="Order Infomation &gt;">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtWeight" layoutX="14.0" layoutY="208.0" prefHeight="32.0" prefWidth="181.0" promptText="Item Weight" />
+            <TextField fx:id="txtHeight" layoutX="14.0" layoutY="254.0" prefHeight="32.0" prefWidth="83.0" promptText="Height" />
+            <TextField fx:id="txtWidth" layoutX="112.0" layoutY="254.0" prefHeight="32.0" prefWidth="83.0" promptText="Width" />
+            <TextField fx:id="txtLength" layoutX="212.0" layoutY="254.0" prefHeight="32.0" prefWidth="83.0" promptText="length" />
+            <Label layoutX="18.0" layoutY="325.0" text="Payment Infomation &gt;">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAmount" layoutX="18.0" layoutY="350.0" prefHeight="32.0" prefWidth="181.0" promptText="Amount" />
+            <Label layoutX="19.0" layoutY="394.0" prefHeight="25.0" prefWidth="108.0" text="Payment Type &gt;">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="369.0" layoutY="251.0" onAction="#calculateRateOnAction" prefHeight="38.0" prefWidth="143.0" ripplerFill="#c5e5ff" style="-fx-background-color: #00ff7f;" text="Calculate Rate" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="txtCustomerName" layoutX="178.0" layoutY="72.0" prefHeight="32.0" prefWidth="143.0" promptText="Customer Name" />
+            <JFXButton buttonType="RAISED" layoutX="369.0" layoutY="69.0" onAction="#newCustomerOnAction" prefHeight="38.0" prefWidth="143.0" ripplerFill="#c5e5ff" style="-fx-background-color: #0088ff;" text="New Customer" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ComboBox fx:id="cmbPType" layoutX="14.0" layoutY="163.0" prefWidth="150.0" promptText="Pacakge type" />
+            <ComboBox fx:id="cmbPayType" layoutX="20.0" layoutY="426.0" prefHeight="25.0" prefWidth="150.0" promptText="Payment Type" />
+         </children>
+      </Pane>
+      <TextField fx:id="txtBillNumber" editable="false" layoutX="1079.0" layoutY="20.0" prefHeight="32.0" prefWidth="114.0" promptText="Bill Number" />
+      <Pane layoutX="635.0" layoutY="66.0" prefHeight="474.0" prefWidth="559.0" style="-fx-border-color: #0088ff; -fx-border-radius: 15px;">
+         <children>
+            <TextField fx:id="txtTelephoneNo" layoutX="34.0" layoutY="223.0" prefHeight="32.0" prefWidth="173.0" promptText="Telephone No" />
+            <TextField fx:id="txtAddress" layoutX="34.0" layoutY="272.0" prefHeight="32.0" prefWidth="275.0" promptText="Address" />
+            <DatePicker fx:id="txtDate" layoutX="36.0" layoutY="322.0" prefHeight="32.0" prefWidth="131.0" />
+            <TextField fx:id="cmbOrderAction" layoutX="201.0" layoutY="322.0" prefHeight="32.0" prefWidth="108.0" promptText="Accespted" text="Accepted" />
+            <TextField fx:id="txtDID" editable="false" layoutX="34.0" layoutY="77.0" prefHeight="32.0" prefWidth="173.0" promptText="Dilivery ID" text="D005" />
+            <Label layoutX="25.0" layoutY="39.0" text="Delivery Infomation &gt;">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFirstName" layoutX="34.0" layoutY="126.0" prefHeight="32.0" prefWidth="173.0" promptText="First Name" />
+            <TextField fx:id="txtSecondName" layoutX="34.0" layoutY="174.0" prefHeight="32.0" prefWidth="173.0" promptText="Second Name" />
+         </children>
+      </Pane>
+      <JFXButton buttonType="RAISED" layoutX="1012.0" layoutY="569.0" onAction="#placeOrderOnAction" prefHeight="48.0" prefWidth="182.0" ripplerFill="#c5e5ff" style="-fx-background-color: #00ff7f;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="917.0" layoutY="568.0" prefHeight="48.0" prefWidth="74.0" ripplerFill="#c5e5ff" style="-fx-background-color: #0088ff;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Button layoutX="1012.0" layoutY="23.0" mnemonicParsing="false" onAction="#printOnAction" text="Print" />
+   </children>
+</AnchorPane>
